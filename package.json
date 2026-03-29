@@ -1,0 +1,75 @@
+{
+  "name": "vscode-workspace-folder-stash",
+  "displayName": "Workspace Folder Stash",
+  "description": "Temporarily close and reopen root folders in multi-root workspaces.",
+  "version": "0.1.0",
+  "publisher": "artern",
+  "author": {
+    "name": "artern"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artern/vscode-workspace-folder-stash"
+  },
+  "keywords": [
+    "workspace",
+    "folder",
+    "stash",
+    "close",
+    "reopen",
+    "multi-root"
+  ],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:folderStash.temporarilyCloseFolder",
+    "onCommand:folderStash.reopenFolder"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "folderStash.temporarilyCloseFolder",
+        "title": "Temporarily Close Folder"
+      },
+      {
+        "command": "folderStash.reopenFolder",
+        "title": "Reopen Folder"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "folderStash.temporarilyCloseFolder",
+          "when": "resourceSet && explorerResourceIsRoot && listHasSelectionOrFocus && workspaceFolderCount > 0 && workbenchState == workspace",
+          "group": "9_folderStash@1"
+        },
+        {
+          "command": "folderStash.reopenFolder",
+          "when": "workbenchState == workspace",
+          "group": "9_folderStash@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "compile": "pnpm run build",
+    "vscode:prepublish": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.5",
+    "@types/vscode": "^1.74.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
+}
