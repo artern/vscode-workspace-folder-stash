@@ -2,7 +2,7 @@
   "name": "vscode-workspace-folder-stash",
   "displayName": "Workspace Folder Stash",
   "description": "Temporarily close and reopen root folders in multi-root workspaces.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "artern",
   "author": {
     "name": "artern"
