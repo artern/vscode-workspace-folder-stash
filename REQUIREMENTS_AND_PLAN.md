@@ -152,7 +152,8 @@ When 条件详解：
 - 版本号：0.1.0
 - Publisher：artern
 - GitHub：https://github.com/artern/vscode-workspace-folder-stash
-- 发布流程：`vsce publish`
+- 发布流程：`pnpx @vscode/vsce publish --no-dependencies`
+- 版本递增建议：发布前使用 `pnpm version`（如 `pnpm version patch`）提升版本，避免重复版本发布失败
 
 ---
 

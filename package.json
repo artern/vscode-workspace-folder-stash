@@ -13,12 +13,20 @@
     "url": "https://github.com/artern/vscode-workspace-folder-stash"
   },
   "keywords": [
+    "vscode",
     "workspace",
-    "folder",
-    "stash",
-    "close",
-    "reopen",
-    "multi-root"
+    "multi-root",
+    "code-workspace",
+    "workspace-folder",
+    "folder-management",
+    "explorer",
+    "temporarily-close",
+    "reopen-folder",
+    "restore-workspace",
+    "quick-pick",
+    "工作区",
+    "多根工作区",
+    "文件夹管理"
   ],
   "engines": {
     "vscode": "^1.74.0"
